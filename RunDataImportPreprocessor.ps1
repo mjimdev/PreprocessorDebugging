@@ -4,8 +4,8 @@ $Config = @{
     SourceBaseApiUrl='' #the api url, Examples: https://ods.example.com/api, https://ods.example.com
     DataApi="/data/v3" #Examples: data/v3, or data/v3/2019
     ApiVersion='6.1'  # the Api version Examples 5.3, 6.1
-    SourceKey=""  # the Key to acces to get a token 
-    SourceSecret=""  # the Secret to acces to get a token 
+    SourceKey=""  # the Key to get a token 
+    SourceSecret=""  # the Secret to get a token 
     WorkingCsvFile=""  # The csv file to be processed
     PreprocessorFile=""  # The preprocessor to run (ps1 file)
     RemoveOldLogs="1" #  1= true,  0=false
