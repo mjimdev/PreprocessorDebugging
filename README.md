@@ -9,14 +9,27 @@ Often times when doing preprocessors in data import it can be difficult to assoc
 2. Open the file DataImportPreprocessorDebugger.ps1 and edit the config section with the correct information.
 3. Run DataImportPreprocessorDebugger.ps1 by Power Shell console
 
-#####PowerShell
+###### Configuration Section
+ * ` SourceBaseApiUrl       `The api url Examples: https://ods.example.com/api, https://ods.example.com
+ * ` DataApi                `Examples: data/v3, or data/v3/2019
+ * ` ApiVersion             `The Api version, Examples 5.3, 6.1
+ * ` SourceKey              `The Key to get a token 
+ * ` SourceSecret           `The Secret to get a token 
+ * ` WorkingCsvFile         `The csv file to be processed
+ * ` WorkingOutputCsvFile   `The result csv
+ * ` PreprocessorFile       `The preprocessor to run (ps1 file)
+ * ` RemoveOldLogs          `1 to remove old logs, 0 to keep old logs
+
+ 
+###### PowerShell
+
 ```powershell 
 #Change your directory
  $dataImportPreprocessorDebugger = "C:\DataImportPreprocessorDebugger\DataImportPreprocessorDebugger.ps1"
 Write-host -ForegroundColor Cyan  $dataImportPreprocessorDebugger 
  &  $dataImportPreprocessorDebugger 
 ``` 
- 
+
 ### Logs
 
 By default, the application creates log files, to review them go to the root directory and find the Logs folder.
