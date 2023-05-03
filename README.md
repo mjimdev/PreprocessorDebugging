@@ -32,7 +32,7 @@ Write-host -ForegroundColor Cyan  $dataImportPreprocessorDebugger
 
 ### Logs
 
-By default, the application creates log files, to review them go to the root directory and find the Logs folder.
+By default, the script creates log files, to review them go to the root directory and find the Logs folder.
 ### Support
 
 
