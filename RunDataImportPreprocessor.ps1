@@ -7,6 +7,7 @@ $Config = @{
     SourceKey=""  # the Key to get a token 
     SourceSecret=""  # the Secret to get a token 
     WorkingCsvFile=""  # The csv file to be processed
+    WorkingOutputCsvFile=""  # The output csv file 
     PreprocessorFile=""  # The preprocessor to run (ps1 file)
     RemoveOldLogs="1" #  1= true,  0=false
 	
@@ -47,7 +48,13 @@ Function Process-csv()
            $rowsProcessed += 1
     }
 
-    $CsvData  | PreprocessorDebugging
+    $orderedOutputValues= $CsvData  | PreprocessorDebugging
+
+    #export to CSV
+    $csvRecords = $orderedOutputValues -join "`r`n" | Out-String
+    Write-Host " $csvRecords"
+
+    $orderedOutputValues | Out-File  $Config.WorkingOutputCsvFile
 }
 
 Function Init()
